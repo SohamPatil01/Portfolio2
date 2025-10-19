@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soham Patil | Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --main-bg: #f0f4f8;
+        --sidebar-bg: #ffffff;
+        --accent-color: #0077b6;
+        --highlight-color: #ffb703;
+        --text-color: #2c2c2c;
+        --section-spacing: 3rem;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        display: flex;
+        min-height: 100vh;
+        background: var(--main-bg);
+        color: var(--text-color);
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: 300px;
+        background: var(--sidebar-bg);
+        padding: 2rem;
+        border-right: 1px solid #ddd;
+        position: fixed;
+        height: 100vh;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .profile-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px solid var(--accent-color);
+        margin-bottom: 1rem;
+        box-shadow: 0 0 12px rgba(0, 119, 182, 0.2);
+      }
+
+      .sidebar h1 {
+        font-size: 2rem;
+        color: var(--accent-color);
+        margin-bottom: 0.5rem;
+      }
+
+      .sidebar p,
+      .sidebar a {
+        margin: 0.4rem 0;
+        font-size: 0.95rem;
+        color: var(--text-color);
+        text-decoration: none;
+      }
+
+      .btn {
+        padding: 0.5rem 1rem;
+        background: var(--accent-color);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin-top: 1rem;
+        cursor: pointer;
+        transition: background 0.3s;
+        display: inline-block;
+      }
+
+      .btn:hover {
+        background: var(--highlight-color);
+      }
+
+      .social-icons a {
+        margin: 0 0.4rem;
+        font-size: 1.5rem;
+        color: var(--accent-color);
+        transition: transform 0.3s;
+      }
+
+      .social-icons a:hover {
+        transform: scale(1.2);
+        color: var(--highlight-color);
+      }
+
+      /* Main Content */
+      .main-content {
+        margin-left: 300px;
+        padding: 2rem;
+        width: calc(100% - 300px);
+        overflow-y: auto;
+      }
+
+      section {
+        margin-bottom: var(--section-spacing);
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      h2 {
+        color: var(--accent-color);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        list-style-type: square;
+        padding-left: 1.5rem;
+      }
+
+      li {
+        margin-bottom: 0.6rem;
+      }
+
+      .project-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 8px 20px rgba(0, 119, 182, 0.15);
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #e0e0e0;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #bbb;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h1 id="main-title">Soham Patil</h1>
+      <img src="your-profile.jpg" alt="Soham Patil" class="profile-img" />
+      <p><strong>Location:</strong> Pune, India</p>
+      <p><strong>Email:</strong> patilsoham899@gmail.com</p>
+      <p><strong>Phone:</strong> +91 7028556887</p>
+      <p>
+        <strong>GitHub:</strong>
+        <a href="https://github.com/sohampatil01" target="_blank"
+          >github.com/sohampatil01</a
+        >
+      </p>
+      <p>
+        <strong>LinkedIn:</strong>
+        <a href="https://linkedin.com/in/SohamPatil" target="_blank"
+          >linkedin.com/in/SohamPatil</a
+        >
+      </p>
+    </div>
+
+    <div class="main-content">
+      <section>
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <strong>Genba Sopanrao Moze College, Pune</strong> (2022–2026) –
+            B.E. in Computer Engineering | GPA: 9.23/10
+          </li>
+          <li>
+            <strong>Suryadatta Junior College, Pune</strong> (2020–2022) – HSC |
+            66%
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <ul>
+          <li>Languages: C++, Java, Python</li>
+          <li>Web: HTML, CSS, JavaScript, React</li>
+          <li>Databases: MySQL, SQL Server</li>
+          <li>Tools: Git, GitHub, VS Code</li>
+          <li>
+            Soft Skills: Teamwork, Time Management, Problem Solving,
+            Adaptability
+          </li>
+          <li>Languages Known: English, Hindi, Marathi</li>
+        </ul>
+      </section>
+
+      <section class="projects">
+        <h2>Projects</h2>
+
+        <div class="project-card">
+          <h3>Inventory Management System</h3>
+          <p>
+            Python + MySQL based GUI for managing products, stock, and sales
+            history with search, filter, and error handling.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Jarvis – Python Virtual Assistant</h3>
+          <p>
+            Voice-based assistant using SpeechRecognition & Pyttsx3 to execute
+            system tasks, fetch info from web, and interact via speech.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Hotel Menu Website</h3>
+          <p>
+            Multi-page responsive website to display dynamic food menus with
+            images, categories, and a cart using localStorage & Node.js backend.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Contact Management System</h3>
+          <p>
+            Python CLI application to add, update, and delete contacts using
+            structured file storage and validations.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>Jarvis with AI-Enhancements</h3>
+          <p>
+            Extended Jarvis with GPT-style prompts and voice-to-command
+            execution for smarter task handling and conversational responses.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Experience & Takeaways</h2>
+        <ul>
+          <li>Built full-stack projects from planning to deployment</li>
+          <li>Hands-on experience with APIs, UI/UX, and DB design</li>
+          <li>Effective communication during team collaborations</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Future Goals</h2>
+        <ul>
+          <li>Master MERN stack and Spring Boot backend</li>
+          <li>Launch a SaaS product solving real-world issues</li>
+          <li>Contribute to open source & tech communities</li>
+          <li>Integrate AI and automation in future apps</li>
+        </ul>
+      </section>
+    </div>
+
+    <script>
+      // Typing Effect
+      const titleText = "Soham Patil";
+      const titleElem = document.getElementById("main-title");
+      let idx = 0;
+
+      function typeEffect() {
+        if (idx < titleText.length) {
+          titleElem.innerHTML += titleText.charAt(idx);
+          idx++;
+          setTimeout(typeEffect, 150);
+        }
+      }
+      titleElem.innerHTML = "";
+      typeEffect();
+
+      const sections = document.querySelectorAll("section");
+      window.addEventListener("scroll", () => {
+        sections.forEach((sec) => {
+          const top = sec.getBoundingClientRect().top;
+          if (top < window.innerHeight - 100) {
+            sec.classList.add("visible");
+          }
+        });
+      });
+      window.dispatchEvent(new Event("scroll"));
+    </script>
+  </body>
+</html>
